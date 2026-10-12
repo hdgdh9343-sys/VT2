@@ -57,14 +57,20 @@ body:not(.ed) .t.hid{display:none!important}#fps{display:none!important}
 <div id="hud"><canvas id="mmap" width="120" height="120"></canvas><div id="top"><span id="sA" style="color:#6ab4ff"></span><span id="tm"></span><span id="sB" style="color:#ff8a5a"></span></div><div id="feed"></div>
 <div id="xh"><i id="x1"></i><i id="x2"></i><i id="x3"></i><i id="x4"></i><i id="x5"></i><i id="x6"></i></div><div id="bl"></div><div id="br"></div><div id="mon"></div><div id="di"></div><div id="fps" style="position:absolute;left:12px;top:136px;font-size:12px;color:#9f9"></div><div id="msg"></div><div id="dth" style="position:absolute;left:50%;bottom:90px;transform:translateX(-50%);background:#000c;border:1px solid #fff4;border-radius:8px;padding:8px 12px;font-weight:400;font-size:13px;display:none;text-shadow:none;min-width:260px"></div><div id="dmg"></div></div>
 <div id="load"><img id="lm"><h1 id="ln"></h1><div id="lt2" class="mu"></div><div id="ltip"></div><div class="bar" style="width:min(520px,80vw)"><i id="lb" style="width:0"></i></div></div>
-<div id="auth" style="display:none;position:fixed;inset:0;z-index:200;background:#080b10f5;align-items:center;justify-content:center;padding:16px;touch-action:pan-y"><div id="authb" class="card" style="width:min(420px,96vw);max-height:92vh;overflow:auto;padding:22px"><h1 style="color:var(--ac);margin:0 0 4px">VT2</h1><div class="mu" style="margin-bottom:14px">Войдите или создайте локальный аккаунт</div><label>Логин</label><input id="authUser" maxlength="20" autocomplete="username" placeholder="Придумайте логин" style="display:block;width:100%;margin:5px 0 12px"><label>Пароль</label><input id="authPass" type="password" maxlength="80" autocomplete="current-password" placeholder="Придумайте пароль" onkeydown="if(event.key==='Enter')authLogin()" style="display:block;width:100%;margin:5px 0 14px"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="on" onclick="authRegister()">Создать аккаунт</button><button onclick="authLogin()">Войти</button></div><div class="mu" style="margin-top:12px">Аккаунт и прогресс хранятся только в этом браузере. Это пока не серверная регистрация.</div><div id="authMsg" style="margin-top:10px;color:#ffb454"></div></div></div><div id="ed"><div id="edb"><b>Раскладка кнопок</b> — перетащите кнопки на нужные места <button class="on" onclick="U.layDone()">Готово</button> <button onclick="U.layReset()">Сброс</button></div></div><div id="scope"><i class="h"></i><i class="v"></i><i class="d"></i></div><div id="ov"><div id="ovb"></div></div><div id="buy"><div id="buyb"></div></div><div id="res"><div id="resb"></div></div>
+<div id="auth" style="display:none;position:fixed;inset:0;z-index:200;background:#080b10f5;align-items:center;justify-content:center;padding:16px;touch-action:pan-y"><div id="authb" class="card" style="width:min(420px,96vw);max-height:92vh;overflow:auto;padding:22px"><h1 style="color:var(--ac);margin:0 0 4px">VT2</h1><div class="mu" style="margin-bottom:14px">Войдите или создайте онлайн-аккаунт</div><label>Логин</label><input id="authUser" maxlength="20" autocomplete="username" placeholder="Придумайте логин" style="display:block;width:100%;margin:5px 0 12px"><label>Пароль</label><input id="authPass" type="password" maxlength="80" autocomplete="current-password" placeholder="Придумайте пароль" onkeydown="if(event.key==='Enter')authLogin()" style="display:block;width:100%;margin:5px 0 14px"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="on" onclick="authRegister()">Создать аккаунт</button><button onclick="authLogin()">Войти</button></div><div class="mu" style="margin-top:12px">Аккаунт работает через Supabase. Логин используется вместо email. Если регистрация не проходит, отключите подтверждение email в настройках Auth проекта.</div><div id="authMsg" style="margin-top:10px;color:#ffb454"></div></div></div><div id="ed"><div id="edb"><b>Раскладка кнопок</b> — перетащите кнопки на нужные места <button class="on" onclick="U.layDone()">Готово</button> <button onclick="U.layReset()">Сброс</button></div></div><div id="scope"><i class="h"></i><i class="v"></i><i class="d"></i></div><div id="ov"><div id="ovb"></div></div><div id="buy"><div id="buyb"></div></div><div id="res"><div id="resb"></div></div>
 <div id="pause"><div><h3>Пауза</h3><div class="mu">Нажмите «Продолжить» для возврата к управлению мышью.</div><p><button class="on" onclick="U.resume()">Продолжить</button> <button onclick="U.quit()">Выйти в меню</button></p></div></div>
 <div class="t" id="tj" style="left:20px;bottom:30px;width:120px;height:120px"></div><div class="t" id="tf" style="right:30px;bottom:90px;width:92px;height:92px">ОГОНЬ</div>
 <div class="t" id="tr" style="right:140px;bottom:40px;width:56px;height:56px">R</div><div class="t" id="tu" style="right:30px;bottom:200px;width:56px;height:56px">ПРЫЖ</div>
 <div class="t" id="tc" style="right:100px;bottom:200px;width:56px;height:56px">СЕСТЬ</div><div class="t" id="tw" style="right:170px;bottom:120px;width:56px;height:56px">ОРУЖ</div>
 <div class="t" id="tb" style="left:160px;bottom:30px;width:56px;height:56px">ЗАКУП</div><div class="t" id="ta" style="right:140px;bottom:110px;width:56px;height:56px">ЦЕЛЬ</div><div class="t" id="te" style="right:240px;bottom:40px;width:64px;height:64px">БОМБА</div><div class="t" id="tz" style="right:240px;bottom:110px;width:56px;height:56px">ЗУМ</div><div class="t" id="tg" style="right:310px;bottom:110px;width:56px;height:56px">БРОСИТЬ</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SB_URL="https://nyaqjurmozyaiytnumdp.supabase.co";
+const SB_PUBLISHABLE_KEY="sb_publishable_cERI8BmEfdODAxXdVAgWeg_cK5npTOw";
+const sb=(window.supabase&&window.supabase.createClient)?window.supabase.createClient(SB_URL,SB_PUBLISHABLE_KEY):null;
+let sbUser=null,sbProfile=null,lobbyId=null,lobbyChannel=null,lobbyMembers=0;
+
 const $=s=>document.querySelector(s),R=THREE,rnd=(a,b)=>a+Math.random()*(b-a),ri=(a,b)=>Math.floor(rnd(a,b+1)),cl=(v,a,b)=>Math.max(a,Math.min(b,v)),rn=()=>(Math.random()+Math.random()+Math.random()-1.5)/1.5,esc=s=>String(s).replace(/[<&>"]/g,'');
 /* ===== Weapon System: каталог (оригинальные названия VT2) ===== */
 const WK='id n cat cost dmg rpm mag res rel spd rec spr auto pel hs rng len'.split(' ');
@@ -108,13 +114,62 @@ const getAccounts=()=>{try{return JSON.parse(localStorage.getItem(ACCOUNTS_KEY)|
 const setAccounts=a=>{try{localStorage.setItem(ACCOUNTS_KEY,JSON.stringify(a))}catch(e){}};
 CASES.forEach((c,i)=>{if(i>=12){c.cur='tk';c.cost=[100,250,500,1000][i-12];c.w=[38,30,20,12,0]}});CASES.forEach(c=>{const tr=c.cur==='cr'?Math.min(1,Math.max(0,(c.cost-450)/600)):Math.min(1,Math.max(0,Math.log10(c.cost/10)/2)),B=[60,25,10,4,1],T=[10,22,30,26,12];c.tier=tr;c.w=B.map((b,k)=>+(b+(T[k]-b)*tr).toFixed(1));c.rr=.004+.03*tr});
 let PR=defP();try{const aa=getAccounts();if(activeAccount&&aa[activeAccount]&&aa[activeAccount].profile)PR=Object.assign(defP(),aa[activeAccount].profile);else if(!activeAccount)PR=Object.assign(defP(),JSON.parse(localStorage.getItem(SV)||'{}'))}catch(e){}
-const save0=0;const save=()=>{try{localStorage.setItem(SV,JSON.stringify(PR));if(activeAccount){const a=getAccounts();if(a[activeAccount]){a[activeAccount].profile=PR;setAccounts(a)}}}catch(e){}};
+const save0=0;
+const save=()=>{
+  try{localStorage.setItem(SV,JSON.stringify(PR));if(activeAccount){const a=getAccounts();if(a[activeAccount]){a[activeAccount].profile=PR;setAccounts(a)}}if(sbUser)localStorage.setItem('vt2_cache_'+sbUser.id,JSON.stringify(PR))}catch(e){}
+};
 async function passHash(v){try{if(window.crypto&&crypto.subtle){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('')}}catch(e){}let h=2166136261;for(let i=0;i<v.length;i++){h^=v.charCodeAt(i);h=Math.imul(h,16777619)}return 'local-'+(h>>>0).toString(16)}
 function authMessage(t){const e=document.getElementById('authMsg');if(e)e.textContent=t}
-function authReady(user,profile){activeAccount=user;try{localStorage.setItem(SESSION_KEY,user)}catch(e){}PR=Object.assign(defP(),profile||{});PR.name=PR.name||user;save();document.getElementById('auth').style.display='none';snd('win');render()}
-async function authRegister(){const user=(document.getElementById('authUser').value||'').trim().toLowerCase(),pass=document.getElementById('authPass').value||'';if(!/^[a-z0-9_]{3,20}$/i.test(user))return authMessage('Логин: 3–20 символов, только буквы, цифры и _.');if(pass.length<4)return authMessage('Пароль должен быть не короче 4 символов.');const a=getAccounts();if(a[user])return authMessage('Такой логин уже занят — войдите в аккаунт.');const profile=defP();profile.name=user;profile.cr=100;profile.tk=0;profile.codes=[];profile.authorBadge=false;a[user]={hash:await passHash(pass),profile};setAccounts(a);authReady(user,profile)}
-async function authLogin(){const user=(document.getElementById('authUser').value||'').trim().toLowerCase(),pass=document.getElementById('authPass').value||'',a=getAccounts();if(!a[user]||a[user].hash!==await passHash(pass))return authMessage('Неверный логин или пароль.');authReady(user,a[user].profile)}
-function authLogout(){if(!confirm('Выйти из аккаунта?'))return;activeAccount='';try{localStorage.removeItem(SESSION_KEY)}catch(e){}document.getElementById('auth').style.display='flex';authMessage('');snd('ui')}
+function syntheticEmail(username){return username.toLowerCase()+'@vt2.local'}
+async function loadCloudProfile(user){
+  const {data,error}=await sb.from('profiles').select('id,username,money,silver,created_at').eq('id',user.id).maybeSingle();
+  if(error)throw error;
+  if(!data)throw new Error('Профиль не найден. Проверь, что SQL из предыдущего сообщения выполнен целиком и триггер создания профиля существует.');
+  return data;
+}
+async function authReady(user,cloudProfile){
+  sbUser=user;sbProfile=cloudProfile;activeAccount=(cloudProfile.username||user.user_metadata?.username||user.email?.split('@')[0]||'player').toLowerCase();
+  try{localStorage.setItem(SESSION_KEY,activeAccount)}catch(e){}
+  const cacheKey='vt2_cache_'+user.id;let cached={};try{cached=JSON.parse(localStorage.getItem(cacheKey)||'{}')}catch(e){}
+  PR=Object.assign(defP(),cached);PR.name=cloudProfile.username||activeAccount;
+  // Cloud wallet is authoritative on sign-in; silver is shown as C, money as $.
+  PR.tk=Number(cloudProfile.money)||0;PR.cr=Number(cloudProfile.silver)||0;
+  save();try{localStorage.setItem(cacheKey,JSON.stringify(PR))}catch(e){}
+  document.getElementById('auth').style.display='none';authMessage('');render();
+}
+async function authRegister(){
+  if(!sb)return authMessage('Не удалось загрузить Supabase. Проверь подключение к интернету.');
+  const user=(document.getElementById('authUser').value||'').trim().toLowerCase(),pass=document.getElementById('authPass').value||'';
+  if(!/^[a-z0-9_]{3,20}$/i.test(user))return authMessage('Логин: 3–20 символов, только буквы, цифры и _.');
+  if(pass.length<6)return authMessage('Пароль должен быть не короче 6 символов.');
+  authMessage('Создаём аккаунт…');
+  const {data,error}=await sb.auth.signUp({email:syntheticEmail(user),password:pass,options:{data:{username:user}}});
+  if(error)return authMessage('Ошибка регистрации: '+error.message);
+  if(!data.session){return authMessage('Аккаунт создан, но Supabase ждёт подтверждение email. Открой Authentication → Sign In / Providers → Email и отключи Confirm email, затем войди снова.');}
+  try{const cp=await loadCloudProfile(data.user);await authReady(data.user,cp)}catch(e){authMessage('Аккаунт создан, но профиль не загрузился: '+e.message)}
+}
+async function authLogin(){
+  if(!sb)return authMessage('Не удалось загрузить Supabase. Проверь подключение к интернету.');
+  const user=(document.getElementById('authUser').value||'').trim().toLowerCase(),pass=document.getElementById('authPass').value||'';
+  if(!/^[a-z0-9_]{3,20}$/i.test(user))return authMessage('Введи логин из 3–20 букв, цифр или _.');
+  authMessage('Входим…');
+  const {data,error}=await sb.auth.signInWithPassword({email:syntheticEmail(user),password:pass});
+  if(error)return authMessage('Ошибка входа: '+(error.message.includes('Invalid login credentials')?'неверный логин или пароль':error.message));
+  try{const cp=await loadCloudProfile(data.user);await authReady(data.user,cp)}catch(e){authMessage('Вход выполнен, но профиль не загрузился: '+e.message)}
+}
+async function authLogout(){
+  if(!confirm('Выйти из аккаунта?'))return;
+  if(lobbyChannel){await sb.removeChannel(lobbyChannel);lobbyChannel=null}lobbyId=null;lobbyCode='';lobbyJoined='';
+  if(sb)await sb.auth.signOut();sbUser=null;sbProfile=null;activeAccount='';
+  try{localStorage.removeItem(SESSION_KEY)}catch(e){}
+  document.getElementById('auth').style.display='flex';authMessage('');
+}
+async function initCloudAuth(){
+  if(!sb){document.getElementById('auth').style.display='flex';authMessage('Supabase JS не загрузился. Проверь интернет-соединение.');return}
+  const {data,error}=await sb.auth.getSession();
+  if(error||!data.session){document.getElementById('auth').style.display='flex';return}
+  try{const cp=await loadCloudProfile(data.session.user);await authReady(data.session.user,cp)}catch(e){document.getElementById('auth').style.display='flex';authMessage('Не удалось загрузить профиль: '+e.message)}
+}
 /* ===== Настройки прицела: стиль, цвет, длина, толщина, зазор, прозрачность, точка, динамика ===== */
 const XH=Object.assign({c:'#7dff9a',len:8,th:2,gap:4,op:1,dot:0,dyn:1,st:0},PR.set.xh||{});
 /* ===== Переназначение клавиш, графика, мобильный HUD ===== */
@@ -551,7 +606,7 @@ const MN={comp:'Соревновательный',bomb:'Закладка бом�
 const gunPrev=()=>{ms.clear();ms.add(new R.HemisphereLight(0xffffff,0x334455,1.2),(()=>{const d=new R.DirectionalLight(0xffffff,2);d.position.set(2,3,4);return d})());const ch=person(0xc8641e,glMat()),w=WI[PR.pref]||WI.arx,g=gunMesh(w,PR.eq[w.id]);g.rotation.y=Math.PI;g.position.set(.1,1.27,.42);ch.add(g);
  const sh=new R.Mesh(new R.SphereGeometry(.135,12,10),new R.MeshStandardMaterial({color:0xe6e2d6,roughness:.95}));sh.position.set(0,1.69,.01);sh.scale.set(1,1.15,1.05);ch.add(sh);const gs2=new R.Mesh(new R.BoxGeometry(.2,.045,.05),new R.MeshStandardMaterial({color:0x0a0a0a,roughness:.2,metalness:.5}));gs2.position.set(0,1.72,.125);ch.add(gs2);ch.position.y=-.95;ms.add(ch)};
 function render(){const[l,x,n]=lvl();$('#nav').innerHTML='<div style="padding:12px 0 6px;text-align:center;font:900 20px system-ui;color:var(--ac);letter-spacing:1px">VT2</div>'+NAV.map(n=>`<button class="${pg===n[0]?'on':''}" onclick="U.go('${n[0]}')"><b>${n[1]}</b>${n[2]}</button>`).join('');
- $('#hd').innerHTML=`<div class="top"><div class="av">${esc(PR.name[0]||'?').toUpperCase()}</div><div><b>${esc(PR.name)}</b><div class="mu">Локальный режим · BOT</div></div><div class="lv"><span>${l}</span><i style="width:${x/n*100}%"></i></div><div class="sp"></div>${emb(rk(PR.mmr),30)}<div class="cur">C ${PR.cr}</div><div class="cur g" style="cursor:pointer" onclick="U.go('mkt')">$ ${PR.tk}</div></div>`;$('#menu').style.background=pg==='play'?'transparent':'radial-gradient(#233045,#0b0e13)';
+ $('#hd').innerHTML=`<div class="top"><div class="av">${esc(PR.name[0]||'?').toUpperCase()}</div><div><b>${esc(PR.name)}</b><div class="mu">${sbUser?'Supabase · онлайн-аккаунт':'Supabase не подключён'}</div></div><div class="lv"><span>${l}</span><i style="width:${x/n*100}%"></i></div><div class="sp"></div>${emb(rk(PR.mmr),30)}<div class="cur">C ${PR.cr}</div><div class="cur g" style="cursor:pointer" onclick="U.go('mkt')">$ ${PR.tk}</div></div>`;$('#menu').style.background=pg==='play'?'transparent':'radial-gradient(#233045,#0b0e13)';
  $('#pg').innerHTML=PGS[pg]();if(pg==='set')xhApply('p',XH.gap)}
 function wheel(ch,id,s){const z=ch*360;return`<div style="position:relative;width:${s}px;height:${s}px;margin:10px auto"><div style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(#2fae4c 0 ${z}deg,#3b1f2a ${z}deg 360deg);box-shadow:0 0 30px #000a,inset 0 0 0 4px #0008"></div><div style="position:absolute;inset:14%;border-radius:50%;background:#0f141b;display:grid;place-items:center;font:800 ${s/6}px system-ui;box-shadow:inset 0 0 20px #000">${(ch*100).toFixed(1)}%</div><div id="${id}" style="position:absolute;inset:0"><div style="position:absolute;left:50%;top:-8px;width:6px;height:${s*.17}px;margin-left:-3px;background:#fff;border-radius:3px;box-shadow:0 0 10px #fff"></div></div></div>`}
 let upSel=[],upTg=null,upChance=50,upMult=2;
@@ -569,7 +624,7 @@ play:()=>`<div class="play"><div class="card" style="width:min(250px,34%);align-
 <div class="bn" style="background-image:linear-gradient(90deg,#a0307acc,#40104acc),url(${art('bomb',300,60)});height:60px" onclick="U.go('shop')">Visit Shop</div>
 <div class="mu" style="text-align:center">Режим: ${MN[sel.mode]} · ${MP[sel.map].n} · ${DF[sel.diff].n}</div><button class="big" onclick="U.modes()">ВЫБРАТЬ РЕЖИМ</button><button class="go" onclick="U.start()">PLAY</button></div></div>`,
 prof:()=>{const S=PR.st,kd=S.d?(S.k/S.d).toFixed(2):S.k.toFixed(2),acc=S.sh?(S.ht/S.sh*100).toFixed(1):'0.0',hp=S.k?(S.hs/Math.max(1,S.ht)*100).toFixed(1):'0.0',r=rk(PR.mmr),fav=Object.entries(S.wk).sort((a,b)=>b[1]-a[1])[0],pr=r<17?(PR.mmr%150)/150*100:100;
- return`<div class="card"><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div class="av" style="width:70px;height:70px;font-size:36px">${esc(PR.name[0]||'?').toUpperCase()}</div><div><input value="${esc(PR.name)}" maxlength="14" onchange="PR.name=this.value.trim()||'Игрок';save();render()"><div class="mu">ID ${PR.id}</div></div><div style="display:flex;gap:10px;align-items:center">${emb(r,56)}<div><b>${RN[r]}</b><div class="mu">MMR ${PR.mmr}</div><div class="bar" style="width:140px"><i style="width:${pr}%"></i></div></div></div></div></div>
+ return`<div class="card"><h3>☁ Онлайн-аккаунт</h3><div class="mu">${sbUser?'Подключён к Supabase':'Нет подключения к Supabase'}</div><div>Логин: <b>${esc(sbProfile?.username||PR.name)}</b></div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><span class="cur g">$ ${PR.tk}</span><span class="cur">C ${PR.cr}</span><button onclick="authLogout()">Выйти из аккаунта</button></div><div class="mu" style="margin-top:8px">Аккаунт и стартовый баланс загружаются из Supabase. Изменения игровой валюты в текущей версии пока не синхронизируются на сервер после каждой покупки/продажи.</div></div><div class="card"><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div class="av" style="width:70px;height:70px;font-size:36px">${esc(PR.name[0]||'?').toUpperCase()}</div><div><input value="${esc(PR.name)}" maxlength="14" onchange="PR.name=this.value.trim()||'Игрок';save();render()"><div class="mu">ID ${PR.id}</div></div><div style="display:flex;gap:10px;align-items:center">${emb(r,56)}<div><b>${RN[r]}</b><div class="mu">MMR ${PR.mmr}</div><div class="bar" style="width:140px"><i style="width:${pr}%"></i></div></div></div></div></div>
  <div class="card"><h3>🎟 Коды и аккаунт</h3><div class="mu">Введи секретный или авторский код, если он у тебя есть. Каждый код можно активировать один раз на аккаунт.</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><input id="redeemCode" placeholder="Введите код" maxlength="40" style="flex:1;min-width:180px"><button class="on" onclick="redeemCode()">Активировать</button><button onclick="authLogout()">Выйти</button></div><div class="mu" style="margin-top:8px">Аккаунт: ${esc(activeAccount||PR.name)} · ${PR.authorBadge?'🏅 Значок автора · ':''}Использовано кодов: ${(PR.codes||[]).length}</div></div>
  <div class="card"><h3>Статистика</h3><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${[['K/D',kd],['Матчей',S.m],['Победы / Поражения',S.w+' / '+S.l],['Убийства',S.k],['Смерти',S.d],['Помощь',S.a],['Точность',acc+'%'],['В голову',S.hs+' ('+hp+'%)'],['Время',S.t.toFixed(1)+' мин'],['Побед в сорев.',S.cw],['Любимое',fav?WI[fav[0]].n+' ('+fav[1]+')':'—']].map(a=>`<div class="mu">${a[0]}<br><b style="font-size:18px;color:#fff">${a[1]}</b></div>`).join('')}</div></div>
  <div class="card"><h3>История рейтинга</h3>${PR.mh.length?PR.mh.map(h=>`<div class="mu">${h.d}: ${h.dm>=0?'+':''}${h.dm} → ${h.mmr}</div>`).join(''):'<div class="mu">Сыграйте соревновательный матч.</div>'}</div>
@@ -581,7 +636,7 @@ inv:()=>{const own=[...W.filter(w=>invTab==='Все'||w.cat===invTab).map(w=>({i
 shop:()=>{const d=Math.floor(Date.now()/864e5),off=[];for(let i=0;i<12;i++)off.push(SK[(d*37+i*101)%SK.length]);
  const tab=`<div style="display:flex;gap:6px;margin-bottom:8px">${[['case','Контейнеры'],['sk','Скины'],['hist','История']].map(t=>`<button class="${shopTab===t[0]?'on':''}" onclick="shopTab='${t[0]}';render()">${t[1]}</button>`).join('')}</div>`;
  return tab+(shopTab==='case'?`<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))">${CASES.map((c,i)=>`<div class="it" onclick="U.case(${i})"><img class="sw" src="${caseArt(i)}" style="width:100%;height:auto"><div class="nm" style="border-color:${c.hue}">${c.n}<div class="mu">${c.cur==='cr'?'C ':'$ '}${c.cost} · ${SK.filter(s=>s.col===i).length} предметов</div></div></div>`).join('')}</div>`:shopTab==='sk'?`<div class="mu">Предложения дня (всего скинов в игре: ${SK.length})</div><div class="grid">${off.map(s=>`<div class="it"><img class="sw" src="${icon(s)}" style="width:100%;height:auto;background:linear-gradient(135deg,#2a3340,#171c24)"><div class="nm" style="border-color:${RC[s.r]}">${s.n}<div class="mu">${RAR[s.r]}</div>${PR.own.includes(s.id)?'<div class="mu">Куплено</div>':`<button onclick="U.skin('${s.id}')">C ${RP[s.r]}</button>`}</div></div>`).join('')}</div>`:PR.buys.length?'<table>'+PR.buys.map(b=>`<tr><td>${b.t}</td><td>${b.w}</td><td>${b.c}</td></tr>`).join('')+'</table>':'<div class="mu">Покупок пока нет.</div>')+'<div class="mu" style="margin-top:8px">Скины, купленные здесь за C, продать нельзя. Продажа предметов за деньги ($) — во вкладке «Рынок».</div>'},
-fr:()=>`<div class="card"><h3>👥 Друзья и лобби</h3><p class="mu">Создайте комнату и передайте другу код. В этой версии код лобби работает только как демонстрация: серверной синхронизации матча пока нет.</p><button class="on" onclick="makeLobby()">＋ Создать лобби</button>${lobbyCode?`<div style="margin-top:12px;padding:12px;background:#0d1219;border-radius:8px">Код вашей комнаты: <b style="font-size:22px;color:var(--ac)">${lobbyCode}</b> <button onclick="navigator.clipboard? navigator.clipboard.writeText('${lobbyCode}').then(()=>alert('Код скопирован')).catch(()=>prompt('Скопируйте код', '${lobbyCode}')) : prompt('Скопируйте код', '${lobbyCode}')">Копировать код</button></div>`:''}<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><input id="joinLobbyCode" placeholder="Код комнаты друга" maxlength="20" value="${lobbyJoined}" style="flex:1;min-width:170px"><button onclick="joinLobby()">Присоединиться</button></div>${lobbyJoined?`<div class="mu" style="margin-top:8px">Вы ввели код ${lobbyJoined}. Онлайн-сервер ещё не подключён.</div>`:''}<hr style="border-color:var(--ln);margin:16px 0"><div class="mu">Для настоящей игры 1 на 1 или в команде между разными устройствами потребуется сетевой сервер и синхронизация игроков. Сейчас игровой режим остаётся локальным против BOT.</div></div>`,
+fr:()=>`<div class="card"><h3>👥 Друзья и лобби</h3><div class="mu">Аккаунт: ${esc(PR.name)} · ${sbUser?'Supabase подключён':'не авторизован'}</div><p><button class="on" onclick="makeLobby()">＋ Создать лобби</button></p>${lobbyCode?`<div style="margin:10px 0;padding:12px;background:#0d1219;border-radius:8px">Код комнаты: <b style="font-size:22px;color:var(--ac)">${esc(lobbyCode)}</b> <button onclick="navigator.clipboard? navigator.clipboard.writeText('${esc(lobbyCode)}').then(()=>alert('Код скопирован')).catch(()=>prompt('Скопируйте код','${esc(lobbyCode)}')):prompt('Скопируйте код','${esc(lobbyCode)}')">Копировать</button><div class="mu" style="margin-top:8px">Игроков в комнате: ${lobbyMembers} · ${lobbyId?'комната подключена':'подключение…'}</div></div>`:''}<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><input id="joinLobbyCode" placeholder="Код комнаты друга" maxlength="12" value="${esc(lobbyJoined)}" style="flex:1;min-width:150px"><button onclick="joinLobby()">Присоединиться</button></div>${lobbyJoined?`<div class="mu" style="margin-top:8px">Подключённый код: ${esc(lobbyJoined)} · игроков: ${lobbyMembers}</div>`:''}<hr style="border-color:var(--ln);margin:16px 0"><div class="mu">Лобби и участники синхронизируются через Supabase Realtime. Сам игровой матч (движение, стрельба и урон) пока ещё не синхронизирован между устройствами.</div><p><button onclick="authLogout()">Выйти из аккаунта</button></p></div>`,
 set:()=>stabs()+(setTab==='o'?`<div class="card"><h3>Основные</h3>${[['Чувствительность','sens',.3,3,.1],['Громкость','vol',0,1,.05],['Поле зрения (FOV)','fov',60,100,1]].map(a=>`<div style="margin:8px 0">${a[0]}: <b id="v_${a[1]}">${PR.set[a[1]]}</b><br><input type="range" min="${a[2]}" max="${a[3]}" step="${a[4]}" value="${PR.set[a[1]]}" oninput="PR.set.${a[1]}=+this.value;$('#v_${a[1]}').textContent=this.value;save()"></div>`).join('')}<label><input type="checkbox" ${PR.set.sh?'checked':''} onchange="PR.set.sh=+this.checked;ren.shadowMap.enabled=!!PR.set.sh;gs.traverse(o=>{if(o.material)o.material.needsUpdate=true});save()"> Тени</label><p><button onclick="if(confirm('Сбросить весь прогресс?')){localStorage.removeItem(SV);location.reload()}">Сбросить прогресс</button></p></div>`:'')};
 /* ===== Рынок: покупка и продажа только за деньги ($) ===== */
 const RG=[2,8,25,90,320],CM={'Ножи':3.2,'Перчатки':2.4,'Снайперские':1.6,'Винтовки':1.3,'Пулемёты':1.3,'ПП':1.1,'Дробовики':1.1,'Пистолеты':1},SELLERS=['xDark','NoScope','Fenix','Vortex','Kiber','Zorro','Mirage','Ghost','Rex','Alpha7','Nika','Wolf'];
@@ -598,8 +653,50 @@ function mktPage(){const cats=['Все',...CATS,'Ножи','Перчатки'],t
   return head+cf+(L.length?`<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${L.map(x=>{const s=x.s,p=mPrice(s),own=PR.own.includes(s.id);return`<div class="it"><img class="sw" src="${icon(s)}" style="${sw}"><div class="nm" style="border-color:${RC[s.r]}">${s.n}<div class="mu">${RAR[s.r]} · ${x.by}</div>${own?'<div class="mu">Уже есть у вас</div>':`<button ${PR.tk>=p?'':'disabled'} onclick="U.mbuy('${s.id}')">Купить  $ ${p}</button>`}</div></div>`}).join('')}</div>`:'<div class="mu">В этой категории лотов нет.</div>')}
  const mine=PR.own.map(id=>SKI[id]).filter(x=>x&&PR.cs.includes(x.id)&&fc(x)).sort((a,b)=>b.r-a.r),lk=PR.own.filter(id=>!PR.cs.includes(id)).length;
  return head+cf+(mine.length?`<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${mine.map(s=>`<div class="it"><img class="sw" src="${icon(s)}" style="${sw}"><div class="nm" style="border-color:${RC[s.r]}">${s.n}<div class="mu">${RAR[s.r]}</div><button onclick="U.msell('${s.id}')">Продать  $ ${mSell(s)}</button></div></div>`).join('')}</div>`:'<div class="mu">Нет скинов на продажу. Откройте серебряный (C) кейс в магазине — выпавшие скины можно продать здесь за деньги.</div>')+(lk?`<div class="mu" style="margin-top:8px">Не продаются (${lk}): куплены в магазине за C или выпали из кейсов за деньги.</div>`:'')}
-function redeemCode(){const el=document.getElementById('redeemCode'),code=(el&&el.value||'').trim().toLowerCase();if(!code)return alert('Введите код.');PR.codes=PR.codes||[];if(PR.codes.includes(code))return alert('Этот код уже использован на аккаунте.');if(code==='vkusno52'){PR.tk+=520000;PR.codes.push(code);save();snd('win');render();alert('Готово! Начислено 520 000 денег.')}else if(code==='vt2author'){PR.authorBadge=true;PR.codes.push(code);save();snd('win');render();alert('Открыт значок автора!')}else{snd('lose');alert('Такого кода нет.')}}
-let lobbyCode='',lobbyJoined='';function makeLobby(){lobbyCode=Math.random().toString(36).slice(2,5).toUpperCase()+'-'+Math.random().toString(36).slice(2,5).toUpperCase();try{localStorage.setItem('vt2_demo_lobby_'+lobbyCode,JSON.stringify({host:PR.name,created:Date.now()}))}catch(e){}snd('win');render()}function joinLobby(){const el=document.getElementById('joinLobbyCode'),code=(el&&el.value||'').trim().toUpperCase();if(!code)return alert('Введите код лобби.');lobbyJoined=code;snd('ui');render();alert('Код принят в интерфейсе. Для соединения игроков на разных устройствах нужно подключить онлайн-сервер; сейчас лобби демонстрационное и матч не синхронизируется.')}
+async function redeemCode(){
+ const el=document.getElementById('redeemCode'),code=(el&&el.value||'').trim().toLowerCase();if(!code)return alert('Введите код.');
+ if(code==='vkusno52'){
+  if(!sbUser)return alert('Сначала войди в онлайн-аккаунт.');
+  const {data,error}=await sb.rpc('redeem_vt2_code',{p_code:code});
+  if(error)return alert('Не удалось активировать код: '+error.message+'\nПроверь, что SQL для секретных кодов выполнен.');
+  if(!data||!data.ok)return alert(data?.message||'Код не принят.');
+  try{sbProfile=await loadCloudProfile(sbUser);PR.tk=Number(sbProfile.money)||0;PR.cr=Number(sbProfile.silver)||0;PR.codes=PR.codes||[];if(!PR.codes.includes(code))PR.codes.push(code);save();snd('win');render();alert('Готово! Начислено '+Number(data.reward).toLocaleString('ru-RU')+' денег.')}catch(e){alert('Награда начислена, но баланс не обновился: '+e.message)}
+ }else if(code==='vt2author'){
+  PR.codes=PR.codes||[];if(PR.codes.includes(code))return alert('Этот код уже использован на аккаунте.');PR.authorBadge=true;PR.codes.push(code);save();snd('win');render();alert('Открыт значок автора!')
+ }else{snd('lose');alert('Такого кода нет.')}
+}
+let lobbyCode='',lobbyJoined='';
+async function lobbyRefresh(){
+ if(!sb||!lobbyId)return;
+ const {data,error}=await sb.from('lobby_members').select('user_id').eq('lobby_id',lobbyId);
+ if(!error)lobbyMembers=(data||[]).length;
+ if(pg==='fr')render();
+}
+async function attachLobby(id){
+ lobbyId=id;
+ if(lobbyChannel){await sb.removeChannel(lobbyChannel);lobbyChannel=null}
+ lobbyChannel=sb.channel('vt2-lobby-'+id)
+  .on('postgres_changes',{event:'*',schema:'public',table:'lobby_members',filter:'lobby_id=eq.'+id},()=>lobbyRefresh())
+  .on('postgres_changes',{event:'*',schema:'public',table:'lobbies',filter:'id=eq.'+id},()=>lobbyRefresh())
+  .subscribe();
+ await lobbyRefresh();
+}
+async function makeLobby(){
+ if(!sbUser)return alert('Сначала войди в онлайн-аккаунт.');
+ const btn=document.activeElement;if(btn)btn.disabled=true;
+ const {data,error}=await sb.rpc('vt2_create_lobby');if(btn)btn.disabled=false;
+ if(error)return alert('Не удалось создать лобби: '+error.message+'\nПроверь, что SQL для лобби выполнен.');
+ lobbyCode=data.code;lobbyJoined=data.code;lobbyId=data.lobby_id;lobbyMembers=1;
+ await attachLobby(lobbyId);snd('win');render();
+}
+async function joinLobby(){
+ if(!sbUser)return alert('Сначала войди в онлайн-аккаунт.');
+ const el=document.getElementById('joinLobbyCode'),code=(el&&el.value||'').trim().toUpperCase();if(!code)return alert('Введите код лобби.');
+ const {data,error}=await sb.rpc('vt2_join_lobby',{p_code:code});
+ if(error)return alert('Не удалось подключиться: '+error.message+'\nПроверь, что SQL для лобби выполнен.');
+ if(!data||!data.ok)return alert(data?.message||'Лобби не найдено.');
+ lobbyJoined=code;lobbyCode='';lobbyId=data.lobby_id;await attachLobby(lobbyId);snd('ui');render();
+}
 const U={sellAll(){const eq=new Set(Object.values(PR.eq));const l=PR.own.filter(id=>SKI[id]&&!eq.has(id));if(!l.length||!confirm('Продать '+l.length+' скинов (кроме надетых)?'))return;let g=0;l.forEach(id=>g+=mSell(SKI[id]));PR.own=PR.own.filter(id=>!l.includes(id));PR.cs=PR.cs.filter(id=>!l.includes(id));PR.tk+=g;PR.buys.unshift({t:new Date().toLocaleString('ru'),w:'Продано '+l.length+' скинов',c:'$ '+g});save();snd('win');render()},
 upSell(){if(!upSel.length)return;const l=upSel.slice();let g=0;l.forEach(id=>{g+=mSell(SKI[id]);if(PR.eq[SKI[id].w]===id)delete PR.eq[SKI[id].w]});PR.own=PR.own.filter(x=>!l.includes(x));PR.cs=PR.cs.filter(x=>!l.includes(x));PR.tk+=g;PR.buys.unshift({t:new Date().toLocaleString('ru'),w:'Продано '+l.length+' скинов',c:'$ '+g});upSel=[];upTg=null;save();snd('win');render()},
 stkBuy(i){ATT();if(PR.tk<STK[i][2])return;PR.tk-=STK[i][2];PR.stk[i]=(PR.stk[i]||0)+1;save();snd('ui');render()},chmBuy(i){ATT();if(PR.tk<CHM[i][3])return;PR.tk-=CHM[i][3];PR.chm[i]=(PR.chm[i]||0)+1;save();snd('ui');render()},
@@ -637,5 +734,5 @@ open(i,n){n=Math.max(1,Math.min(5,(n|0)||1));const c=CASES[i];if(U.busy)return;i
  got.forEach((g,j)=>setTimeout(()=>{const rr=$('#rr'+j);if(rr)rr.style.transform='translateX('+(-(32*110+55+ri(-35,35))+rr.parentElement.clientWidth/2)+'px)'},60));
  setTimeout(()=>{U.busy=0;snd('win');$('#ovb').innerHTML=`<h3>Вы получили (${n})</h3><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(${n>1?110:220}px,1fr));max-width:92vw">${got.map(g=>`<div class="it"><img class="sw" src="${icon(g.it)}" style="width:100%;height:auto;background:#1a212b"><div class="nm" style="border-color:${RC[g.it.r]};font-size:11px">${g.it.n}<div class="mu">${RAR[g.it.r]} ·  $ ${mPrice(g.it)}${g.dup?' · дубль +C '+Math.round(RP[g.it.r]*.4):''}</div></div></div>`).join('')}</div><p><button class="on" onclick="U.busy=0;U.open(${i},${n})">Ещё ×${n}</button> <button onclick="U.busy=0;U.case(${i})">К кейсу</button> <button onclick="U.busy=0;$('#ov').style.display='none';render()">Ок</button></p>`},4000)}};
 const LD={};LB.forEach(id=>LD[id]=document.getElementById(id).getAttribute('style')||'');try{sun.shadow.mapSize.set(2048,2048);sun.shadow.bias=-.0004;sun.shadow.normalBias=.03;ren.toneMappingExposure=1.12;gs.traverse(o=>{const m=o.material;if(m&&m.map){m.map.anisotropy=8;m.map.needsUpdate=true}if(m&&m.isMeshStandardMaterial&&!m.metalness)m.envMapIntensity=.6})}catch(e){}
-gunPrev();render();frame();applyGfx();setBg(1);applyLay();if(!activeAccount||!getAccounts()[activeAccount])document.getElementById('auth').style.display='flex';showLoad(-1,'VT2','Тактический шутер',1600);
+gunPrev();render();frame();applyGfx();setBg(1);applyLay();document.getElementById('auth').style.display='flex';initCloudAuth();showLoad(-1,'VT2','Тактический шутер',1600);
 </script></body></html>
